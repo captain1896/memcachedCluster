@@ -86,21 +86,23 @@ public class SimpleMemCache {
 
         SimpleMemCache cache = SimpleMemCache.getInstance();
         cache.flushAll();
-        String key1 = "zf";
-        cache.set(key1, 18);
-        cache.replace(key1, 20);
-        String key2 = "zf2";
-        cache.set(key2, 19);
-        System.out.println("zf get value:" + cache.get(key1));
-        System.out.println("zf get value:" + cache.get(key2));
+        String chinaKey = "china";
+        String valueValue = "Welcome To China!";
+        cache.set(chinaKey, valueValue);
+        cache.replace(chinaKey, valueValue);
+        String shanghaiKey = "shanghai";
+        String shanghaiValue = "Welcome To The Bund!";
+        cache.set(shanghaiKey, shanghaiValue);
+        System.out.println("chinaKey get value:" + cache.get(chinaKey));
+        System.out.println("shanghaiKey get value:" + cache.get(shanghaiKey));
         // cache.flushAll();
         System.out.println("----after flush -----");
         /*
-         * System.out.println("zf get value:" + cache.get(key1));
-         * System.out.println("zf get value:" + cache.get(key2));
+         * System.out.println("chinaKey get value:" + cache.get(key1));
+         * System.out.println("shanghaiKey get value:" + cache.get(key2));
          */
-        /*System.out.println("zf get value:" + cache.get(key1));
-        System.out.println("zf get value:" + cache.get(key2));
+        /*System.out.println("chinaKey get value:" + cache.get(key1));
+        System.out.println("shanghaiKey get value:" + cache.get(key2));
         for (int i = 100; i < 200; i++) {
             cache.set("key" + i, i);
         }
